@@ -47,7 +47,7 @@ class App extends Component {
 
     componentDidMount() {
         setInterval(async () => {
-            const res = await fetch('http://openlibrary.org/recentchanges.json?limit=10');
+            const res = await fetch('https://openlibrary.org/recentchanges.json?limit=15');
             const data = await res.json();
             const formatData = this.formatData(data);
             this.setState({ data: formatData });
